@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Ammoritization App</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+  		<script src="scripts/jquery-1.8.3.min.js"></script>
+  		<script src="scripts/chromeFileProtocolFix.js"></script>
+  		<script src="scripts/jquery.mobile-1.3.1.min.js"></script>
+  		<script src="scripts/ammoritization.js"></script>
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <div data-role="page">
+        	<div data-role="header">
+        		Ammoritization App
+        	</div>
+          <div data-role="navbar">
+            <ul>  
+              <li>
+                <a href="file:index.html" class="ui-btn-active ui-state-persist">App</a>
+              </li>
+              <li>
+                <a href="file:info.html">Info</a>
+              </li>
+            </ul>
+          </div>
+        	<div data-role="content">
+        		<label for="principle">Principle:</label>
+      			<input type='number' name='principle' id='principle' min='0.00' max='100,000.00' />
+      			<label for="interest">Monthly Interest:</label>
+      			<input type='number' name='interest' id='interest' min='0.00' max='0.06' />
+      			<label for="years">Term of Loan (Years):</label>
+      			<input type="range" name="years" id="years" min='0' max='30' />
+      			<br />
+      			<button onclick="displayAnnualCost();">
+        			Calculate
+      			</button>
+      			<br />
+   				<p>Total annual cost: <span id="annualCost"></span></p>
+        	</div>
+        </div>
+    </body>
+</html>

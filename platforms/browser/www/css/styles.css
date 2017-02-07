@@ -1,0 +1,18 @@
+table {
+	background-color: #666666;
+	color: white;
+	border-radius: 20px;
+	text-align: center;
+}
+
+table tr td {
+	padding: 5px;
+}
+
+table tr th {
+	padding-left: 8px;
+}
+
+.abbrv {
+	font-style: italic;
+}
